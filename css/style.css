@@ -14,8 +14,8 @@ body {
     animation-duration: 1.2s;
 }
 
-main {
-    padding: 50px;
+.themascherm {
+    padding: 25px;
     gap: 50px;
 }
 
@@ -71,14 +71,19 @@ input {
     font-size: 18px;
 }
 
-button {
+.submit {
     width: 250px;
     height: 80px;
-    background: #4F75FF;
+    background: #414bb2;
     border: none;
     border-radius: 10px;
     color: white;
     font-size: 22px;
+}
+
+.submit:hover {
+    background: hsl(235, 47%, 38%);
+    cursor: pointer;
 }
 
 /* ThemaScherm */
@@ -102,9 +107,85 @@ ul {
 .thema__1,
 .thema__2,
 .thema__3 {
-    background: #4F75FF;
+    background: #414bb2;
     padding: 80%;
     border-radius: 100%;
+    cursor: pointer;
+}
+
+
+.thema__1:hover,
+.thema__2:hover,
+.thema__3:hover {
+    background: hsl(235, 47%, 38%);
+    cursor: pointer;
+}
+
+
+
+/* quizscherm */
+.timer {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f24726;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    width: 170px;
+    height: 170px;
+    border-radius: 100px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    padding: 50px 20px;
+    top: 24%;
+    right: 8%;
+}
+
+.header2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+}
+
+.quiz-button {
+    background: #414bb2;
+    color: white;
+    flex-wrap: wrap;
+    width: 550px;
+    height: 80px;
+    border: none;
+    font-size: 27px;
+}
+
+.quiz-button:hover {
+    background: hsl(235, 47%, 33%);
+    cursor: pointer;
+}
+
+.quiz-pictures {
+    width: 600px;
+    height: 370px;
+}
+
+.answers {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer2 {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 @keyframes fade {
