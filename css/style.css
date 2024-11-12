@@ -9,18 +9,23 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    padding: 150px;
+    overflow: hidden;
+    animation-name: fade;
+    animation-duration: 1.2s;
+}
+
+main {
+    padding: 50px;
     gap: 50px;
 }
 
-h1{
-    display: flex;
-    justify-content: center;
-    font-size: 70px;
-    font-weight: 600;
+a {
+    text-decoration: none;
+    color: white;
 }
 
-.header{
+/* startscherm */
+.header {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -28,13 +33,23 @@ h1{
     text-align: center;
     gap: 50px;
 }
-p{
+
+.firstmain {
+    padding: 150px;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: 600;
+}
+
+p {
     font-weight: 300;
     font-size: 18px;
     width: 50%;
 }
 
-.footer{
+.footer {
     padding-top: 12vh;
     display: flex;
     justify-content: center;
@@ -43,20 +58,20 @@ p{
     gap: 20px;
 }
 
-h2{
+h3 {
     display: flex;
     justify-content: flex-start;
     font-weight: 500;
 }
 
-input{
+input {
     font-family: Open Sans, sans-serif;
     width: 300px;
     height: 60px;
     font-size: 18px;
 }
 
-button{
+button {
     width: 250px;
     height: 80px;
     background: #4F75FF;
@@ -64,4 +79,40 @@ button{
     border-radius: 10px;
     color: white;
     font-size: 22px;
+}
+
+/* ThemaScherm */
+h6 {
+    padding: 10px;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    justify-content: center;
+}
+
+.thema__1,
+.thema__2,
+.thema__3 {
+    background: #4F75FF;
+    padding: 80%;
+    border-radius: 100%;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
