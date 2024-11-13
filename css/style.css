@@ -88,8 +88,9 @@ input {
 
 /* ThemaScherm */
 h6 {
-    padding: 10px;
-    font-weight: 300;
+    padding: 20px;
+    font-weight: 400;
+    font-size: 15px;
 }
 
 h2 {

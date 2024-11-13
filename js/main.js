@@ -1,23 +1,30 @@
-// Selecteer het input-veld en de knop
-const nameInput = document.getElementById("name");
-const startButton = document.getElementById("startButton");
-let playerName = "";
-const teamName = document.getElementById("TeamName");
+window.onload = function() {
+    const startButton = document.getElementById("startButton");
+    const nameInput = document.getElementById("name");
+    const teamName = document.getElementById("TeamName");
 
-// Sla de naam op als variabele wanneer de knop wordt geklikt
-startButton.addEventListener("click", () => {
-    if (nameInput.value === "") {
-        alert("Vul een naam in om de quiz te starten.");
-    } else {
-        playerName = nameInput.value;
-        console.log("Naam van de speler:", playerName);
-        window.location.href = "http://127.0.0.1:5500/pages/themascherm.html";
+    
+    if (startButton && nameInput) {
+        startButton.onclick = function() {
+            const playerName = nameInput.value;
 
-        sessionStorage.setItem(playerName)
-        teamName.innerText = playerName;
+            if (playerName === "") {
+                alert("Vul een naam in om de quiz te starten.");
+            } else {
+                
+                sessionStorage.setItem("playername", playerName);
+                
+                
+                window.location.href = "http://127.0.0.1:5500/pages/themascherm.html";
+            }
+        };
+    }
 
-    };
-});
+    
+    const playerName = sessionStorage.getItem("playername");
 
-// lukt niet D:
-
+    
+    if (teamName && playerName) {
+        teamName.innerText = "Team: " + playerName;
+    }
+};
