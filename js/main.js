@@ -1,3 +1,4 @@
+/* Teamnaam */
 window.onload = function() {
     const startButton = document.getElementById("startButton");
     const nameInput = document.getElementById("name");
@@ -28,3 +29,24 @@ window.onload = function() {
         teamName.innerText = "Team: " + playerName;
     }
 };
+
+/* Timer */
+let timer;
+let tijd = 16;
+
+function startTimer() {
+    timer = setInterval(function() {
+        tijd--;
+        document.getElementById("timer").innerText = tijd;
+        
+        if (tijd <= 0) {
+            clearInterval(timer);
+            window.location.href = "http://127.0.0.1:5500/index.html"; /* Deze link naar de homepage kan je eraf halen */
+        }
+    }, 1000);
+}
+
+startTimer();
+
+
+
