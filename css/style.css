@@ -111,6 +111,7 @@ ul {
     padding: 80%;
     border-radius: 100%;
     cursor: pointer;
+    transition: all 0.5s;
 }
 
 
