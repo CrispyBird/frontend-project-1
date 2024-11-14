@@ -41,12 +41,14 @@ function startTimer() {
         
         if (tijd <= 0) {
             clearInterval(timer);
-            window.location.href = "http://127.0.0.1:5500/index.html"; /* Deze link naar de homepage kan je eraf halen */
+            window.location.href = ""; /* Deze link naar de homepage kan je eraf halen */
         }
     }, 1000);
 }
 
 startTimer();
+
+// http://127.0.0.1:5500/index.html */
 
 
 

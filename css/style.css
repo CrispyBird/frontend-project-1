@@ -14,16 +14,6 @@ body {
     animation-duration: 1.2s;
 }
 
-.themascherm {
-    padding: 25px;
-    gap: 50px;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
 /* startscherm */
 .header {
     display: flex;
@@ -50,10 +40,10 @@ p {
 }
 
 .footer {
-    padding-top: 12vh;
+    padding-top: 100px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
@@ -87,6 +77,11 @@ input {
 }
 
 /* ThemaScherm */
+.themascherm {
+    padding: 25px;
+    gap: 50px;
+}
+
 h6 {
     padding: 20px;
     font-weight: 400;
@@ -98,18 +93,23 @@ h2 {
     font-weight: 600;
 }
 
-ul {
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.thema__buttons {
     display: flex;
-    gap: 40px;
-    list-style: none;
     justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
 .thema__1,
 .thema__2,
 .thema__3 {
     background: #414bb2;
-    padding: 80%;
+    padding: 70%;
     border-radius: 100%;
     cursor: pointer;
     transition: all 0.5s;
@@ -122,8 +122,6 @@ ul {
     background: hsl(235, 47%, 38%);
     cursor: pointer;
 }
-
-
 
 /* quizscherm */
 .timer {
@@ -177,6 +175,10 @@ ul {
 
 .answers {
     display: flex;
+    gap: 60px;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 
