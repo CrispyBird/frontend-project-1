@@ -16,7 +16,7 @@ window.onload = function() {
                 sessionStorage.setItem("playername", playerName);
                 
                 
-                window.location.href = "http://127.0.0.1:5500/pages/themascherm.html";
+                window.location.href = "pages/themascherm.html";
             }
         };
     }
