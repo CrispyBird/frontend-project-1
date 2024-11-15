@@ -96,6 +96,7 @@ h2 {
 a {
     text-decoration: none;
     color: white;
+    font-size: 25px;
 }
 
 .thema__buttons {
@@ -109,12 +110,18 @@ a {
 .thema__2,
 .thema__3 {
     background: #414bb2;
-    padding: 70%;
-    border-radius: 100%;
+    width: 450px; 
+    height: 450px; 
+    border-radius: 50%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
     cursor: pointer;
     transition: all 0.5s;
+    text-decoration: none;
 }
-
 
 .thema__1:hover,
 .thema__2:hover,
