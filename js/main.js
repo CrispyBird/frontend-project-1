@@ -45,7 +45,7 @@ function startTimer() {
     }, 1000);
 }
 
-startTimer();
+// startTimer();
 
 /* Spelersnaam */
 const player_Name = document.getElementById("playerName");
