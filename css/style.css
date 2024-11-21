@@ -143,21 +143,11 @@ a {
     padding-top: 30px;
 }
 
-.content-container {
+.header2 section{
     display: flex;
-    align-items: center; /* Verticale uitlijning van afbeelding en timer */
-    justify-content: space-between; /* Plaatst de afbeelding en timer zo ver mogelijk uit elkaar */
-    width: 80%; /* Beperkt de breedte van de container */
-    max-width: 900px; /* Zorgt dat de container niet te breed wordt */
-}
-
-.quiz-pictures {
-    max-width: 600px; /* Maximale breedte van de afbeelding */
-    max-height: 370px; /* Maximale hoogte van de afbeelding */
-    width: auto; /* Houdt de proporties intact */
-    height: auto;
-    object-fit: cover; /* Zorgt dat de afbeelding netjes blijft */
-    margin-right: auto; /* Zorgt dat de afbeelding aan de linkerzijde blijft */
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
 }
 
 .timer {
@@ -192,6 +182,8 @@ a {
 }
 
 .quiz-pictures {
+    display: flex;
+    justify-content: center;
     width: 600px;
     height: 370px;
     object-fit: cover; /* Optioneel: Zorgt dat afbeelding netjes blijft */
