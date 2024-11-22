@@ -76,4 +76,10 @@ if (player_Name && playerName) {
 
 
 
+/* Input Characters */
+    const name_Input = document.getElementById('name');
+    const charCount = document.getElementById('charCount');
+
+    name_Input.setAttribute('maxlength', '8');
+    name_Input.addEventListener;
 

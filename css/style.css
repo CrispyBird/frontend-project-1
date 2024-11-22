@@ -150,8 +150,7 @@ a {
 .quiz-section {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 200px;
+    justify-content: space-around;
     padding-top: 25px;
 }
 
@@ -163,8 +162,8 @@ a {
     color: white;
     font-size: 45px;
     font-weight: bold;
-    width: 185px;
-    height: 185px;
+    width: 165px;
+    height: 165px;
     border-radius: 100px;
     text-align: center;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);     
@@ -221,13 +220,65 @@ a {
     }
 }
 
+
+@media screen and (max-width:1500px) {
+
+    /* Startscherm */
+    /* Themascherm */
+    .header h2 {
+        font-size: 35px;
+    }
+
+    .nameInput {
+        padding-top: 150px;
+    }
+
+    .thema__buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .thema__1,
+    .thema__2,
+    .thema__3 {
+        font-size: 18px;
+        width: 350px;
+        height: 350px;
+    }
+    /* Quizscherm */
+}
+
 @media screen and (max-width:1200px) {
 
     /* Startscherm */
     /* Themascherm */
+    .header h2 {
+        font-size: 35px;
+    }
+
+    .nameInput {
+        padding-top: 175px;
+    }
+
+    .thema__buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .thema__1,
+    .thema__2,
+    .thema__3 {
+        font-size: 18px;
+        width: 300px;
+        height: 300px;
+    }
     /* Quizscherm */
     .header2 {
         padding-top: 50px;
+    }
+
+    .header2 h1 {
+        font-size: 55px;
     }
 
     .answers {
@@ -237,6 +288,11 @@ a {
     .quiz-button {
         width: 450px;
         font-size: 22px;
+    }
+    .timer {
+        width: 140px;
+        height: 140px;
+        font-size: 35px;
     }
 }
 
@@ -253,7 +309,26 @@ a {
     }
 
     /* Themascherm */
+    .header h2 {
+        font-size: 32px;
+    }
 
+    .nameInput {
+        padding-top: 100px;
+    }
+
+    .thema__buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .thema__1,
+    .thema__2,
+    .thema__3 {
+        font-size: 18px;
+        width: 225px;
+        height: 225px;
+    }
     /* Quizscherm */
     .header2 {
         padding-top: 50px;
@@ -282,5 +357,352 @@ a {
         font-size: 30px;
         top: 0;
         right: 0;
+    }
+}
+
+
+@media screen and (max-width:950px) {
+    /* startscherm */
+    /* themascherm */
+    .header h2 {
+        font-size: 32px;
+    }
+
+    .nameInput {
+        padding-top: 100px;
+    }
+
+    .thema__buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .thema__1,
+    .thema__2,
+    .thema__3 {
+        font-size: 18px;
+        width: 230px;
+        height: 230px;
+    }
+    /* quizscherm */
+}
+
+@media screen and (min-width:900px) and (max-width: 1000px){
+    /* startscherm */
+    /* themascherm */
+    .header h2 {
+        font-size: 32px;
+    }
+
+    .nameInput {
+        padding-top: 175px;
+    }
+
+    .thema__buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .thema__1,
+    .thema__2,
+    .thema__3 {
+        font-size: 18px;
+        width: 230px;
+        height: 230px;
+    }
+    /* quizscherm */
+}
+
+
+@media screen and (min-width:700px) and (max-width:750px) {
+    /* startscherm */
+
+    /* themascherm */
+    .header h2 {
+        font-size: 30px;
+    }
+
+    .nameInput {
+        padding-top: 100px;
+    }
+
+    .thema__buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .thema__1,
+    .thema__2,
+    .thema__3 {
+        font-size: 15px;
+        width: 220px;
+        height: 220px;
+    }
+    /* quizscherm */
+    .team_name {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        font-size: 20px;
+    }
+    
+    .timer {
+        position: absolute;
+        top: 1%;
+        right: 2%;
+        width: 90px;
+        height: 90px;
+        font-size:30px;
+    }
+
+    .header2 h1 {
+        font-size: 25px;
+    }
+
+    .quiz-button {
+        width: 400px;
+    }
+
+    .quiz-section {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width:700px) {
+    /* startscherm */
+    /* themascherm */
+    .header h2 {
+        font-size: 30px;
+    }
+
+    .nameInput {
+        padding-top: 100px;
+    }
+
+    .thema__buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .thema__1,
+    .thema__2,
+    .thema__3 {
+        font-size: 15px;
+        width: 220px;
+        height: 220px;
+    }
+    /* quizscherm */
+    .team_name {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        font-size: 20px;
+    }
+    
+    .timer {
+        position: absolute;
+        top: 1%;
+        right: 2%;
+        width: 90px;
+        height: 90px;
+        font-size:30px;
+    }
+
+    .header2 h1 {
+        font-size: 25px;
+    }
+
+    .quiz-button {
+        width: 400px;
+    }
+
+    .quiz-section {
+        width: 100%;
+    }
+}
+@media screen and (max-width:600px) {
+    /* startscherm */
+    .header h1 {
+        font-size: 60px; 
+    }
+    .nameInput h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 25px;
+    }
+    /* themascherm */
+    .header h2 {
+        font-size: 40px;
+    }
+
+    .nameInput {
+        padding-top: 100px;
+    }
+
+    .thema__buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .thema__1,
+    .thema__2,
+    .thema__3 {
+        font-size: 15px;
+        width: 200px;
+        height: 200px;
+    }
+    /* quischerm */
+    .team_name {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+    }
+    
+    .timer {
+        position: absolute;
+        top: 1%;
+        right: 2%;
+        width: 65px;
+        height: 65px;
+        font-size:23px;
+    }
+
+    .header2 h1 {
+        font-size: 20px;
+    }
+
+    .quiz-button {
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 430px) and (max-width: 550px) {
+    /* startscherm */
+    /* themascherm */
+    .header h2 {
+        font-size: 25px;
+    }
+
+    .nameInput {
+        padding-top: 100px;
+    }
+
+    .thema__buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .thema__1,
+    .thema__2,
+    .thema__3 {
+        font-size: 15px;
+        width: 158px;
+        height: 158px;
+    }
+    /* quizscherm */
+}
+
+@media screen and (min-width: 400px) and (max-width: 430px) {
+    /* startscherm */
+    /* themascherm */
+    .header h2 {
+        font-size: 25px;
+    }
+
+    .nameInput {
+        padding-top: 40px;
+    }
+
+    .thema__buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .thema__1,
+    .thema__2,
+    .thema__3 {
+        font-size: 15px;
+        width: 158px;
+        height: 158px;
+    }
+    /* quizscherm */
+}
+
+@media screen and (max-width:400px) {
+    /* startscherm */
+    .header h1 {
+        font-size: 50px; 
+    }
+    .nameInput h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 20px;
+    }
+    /* themascherm */
+    .header h2 {
+        font-size: 25px;
+    }
+
+    .nameInput {
+        padding-top: 40px;
+    }
+
+    .thema__buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .thema__1,
+    .thema__2,
+    .thema__3 {
+        font-size: 15px;
+        width: 158px;
+        height: 158px;
+    }
+
+    /* quizscherm */
+    .body2 {
+        padding-top: 20px;
+    }
+
+    .team_name {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-left:15px;
+        padding-top:22px;
+    }
+    
+    .timer {
+        position: absolute;
+        top:0.5%;
+        right: 2%;
+        width: 60px;
+        height: 60px;
+        font-size: 21px;
+    }
+
+    .header2 h1 {
+        font-size: 21px;
+        
+    }
+
+    .quiz-pictures {
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .quiz-button {
+        width: 300px;
+        height: 80px;
+        font-size: 18px;
+    }
+    .answersInput {
+        padding-top: 20px;
     }
 }
