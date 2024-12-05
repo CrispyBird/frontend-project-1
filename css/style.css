@@ -210,6 +210,92 @@ a {
     flex-wrap: wrap;
 }
 
+/* eindscherm */
+
+.eindScherm {
+    overflow-y: auto;
+}
+
+.header3 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    padding-top: 30px;
+    
+}
+.repeatButton {
+    background: #414bb2;
+    color: white;
+    width: 500px;
+    height: 80px;
+    border: none;
+    font-size: 27px;
+}
+
+.repeatButton:hover {
+    cursor: pointer;
+    background: hsl(235, 47%, 33%);
+}
+
+.scoreBoardSection {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreBoard {
+    font-size: 30px;
+}
+
+.scoreBoard2 {
+    font-size: 40px;
+    font-weight: 200;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.highScores {
+    font-size: 25px;
+}
+
+.userAnswers {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question-section {
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    width: 750px;
+}
+.question-section h3 {
+    margin: 0 0 10px 0;
+}
+.question-section p {
+    margin: 5px 0;
+}
+.answer {
+    color: green;
+}
+.wrong-answer {
+    color: red;
+}
+.show-answer {
+    font-weight: bold;
+    cursor: pointer;
+    color: blue;
+}
+
 @keyframes fade {
     from {
         opacity: 0;
