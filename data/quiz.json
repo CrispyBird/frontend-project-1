@@ -4,7 +4,7 @@
       "vraag": "Hoe heet dit dier?",
       "antwoorden": ["Luiaard", "Aap", "Leeuw", "Slang"],
       "correct": 0,
-      "img": "luiaard.jpg",
+      "img": "../img/luiaard.png",
       "alt": "Een luiaard die in een boom hangt."
     },
     {
