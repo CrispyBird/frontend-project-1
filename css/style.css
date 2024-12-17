@@ -337,7 +337,7 @@ a {
     0%,
     25% {
         opacity: 0;
-        transform: translatey(150px) scale(1.6);
+        transform: translatey(180px) scale(1.6);
     }
 
     25%{

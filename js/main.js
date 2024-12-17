@@ -5,7 +5,7 @@ const teamName = document.getElementById("TeamName");
 const playerNameElement = document.getElementById("playerName");
 const themeButtons = document.querySelectorAll(".thema__buttons a");
 
-window.onload = function () {
+window.onload = function  () {
     // Startknop in index.html
     if (startButton && nameInput) {
         startButton.onclick = function () {
@@ -17,7 +17,7 @@ window.onload = function () {
                 alert("Je naam mag niet langer zijn dan 8 tekens.");
             } else {
                 sessionStorage.setItem("playername", playerName);
-                window.location.href = "../pages/themascherm.html";
+                window.location.href = "../frontend-project-1/pages/themascherm.html";
             }
         };
     }
