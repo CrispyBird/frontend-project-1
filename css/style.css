@@ -9,8 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    animation-name: fade;
-    animation-duration: 1.3s;
+    /* animation: fade 1.3s; */
 }
 
 /* startscherm */
@@ -21,6 +20,17 @@ body {
     align-items: center;
     text-align: center;
     gap: 50px;
+}
+
+.header h1 {
+    animation: fade-up 1.5s;
+}
+
+.header p,
+.nameInput h3,
+.nameInput input,
+.nameInput button {
+    animation: fade 1.5s;
 }
 
 .firstMain {
@@ -134,6 +144,7 @@ a {
 .thema__2:hover,
 .thema__3:hover {
     background: hsl(235, 47%, 38%);
+    transform: scale(1.05);
     cursor: pointer;
 }
 
@@ -311,15 +322,33 @@ a {
 }
 
 @keyframes fade {
-    from {
+
+    0%,
+    60% {
         opacity: 0;
     }
 
-    to {
+    100% {
         opacity: 1;
     }
 }
 
+@keyframes fade-up {
+    0%,
+    25% {
+        opacity: 0;
+        transform: translatey(150px) scale(1.6);
+    }
+
+    25%{
+        opacity: 1;
+
+    }
+
+    100% {
+        transform: translateY(0px) scale(1);
+    }
+}
 
 @media screen and (max-width:1500px) {
 
