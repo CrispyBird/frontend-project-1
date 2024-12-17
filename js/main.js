@@ -17,7 +17,7 @@ window.onload = function  () {
                 alert("Je naam mag niet langer zijn dan 8 tekens.");
             } else {
                 sessionStorage.setItem("playername", playerName);
-                window.location.href = "../frontend-project-1/pages/themascherm.html";
+                window.location.href = "https://CrispyBird.github.io/frontend-project-1/pages/themascherm.html";
             }
         };
     }
