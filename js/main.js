@@ -98,7 +98,7 @@ function loadNextQuestion() {
     const question = quizData[currentQuestionIndex];
     displayQuestion(question);
     currentQuestionIndex++;
-    startTimer();
+    // startTimer();
 }
 
 function displayQuestion(question) {
