@@ -10,7 +10,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     animation-name: fade;
-    animation-duration: 1.2s;
+    animation-duration: 1.3s;
 }
 
 /* startscherm */
@@ -140,11 +140,12 @@ a {
 /* quizscherm */
 .header2 {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 25px;
     padding-top: 30px;
+
 }
 
 .quiz-section {
@@ -166,7 +167,7 @@ a {
     height: 165px;
     border-radius: 100px;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);     
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .quiz-button {
@@ -188,7 +189,7 @@ a {
     display: flex;
     justify-content: center;
     height: 370px;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .answers {
@@ -218,13 +219,14 @@ a {
 
 .header3 {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 25px;
     padding-top: 30px;
-    
+
 }
+
 .repeatButton {
     background: #414bb2;
     color: white;
@@ -232,11 +234,13 @@ a {
     height: 80px;
     border: none;
     font-size: 27px;
+    transition: all 0.2s;
 }
 
 .repeatButton:hover {
     cursor: pointer;
     background: hsl(235, 47%, 33%);
+    transform: scale(1.05);
 }
 
 .scoreBoardSection {
@@ -277,19 +281,29 @@ a {
     margin-bottom: 20px;
     border-radius: 5px;
     width: 750px;
+    transition: all 0.2s;
 }
+
+.question-section:hover {
+    transform: scale(1.05);
+}
+
 .question-section h3 {
     margin: 0 0 10px 0;
 }
+
 .question-section p {
     margin: 5px 0;
 }
+
 .answer {
     color: green;
 }
+
 .wrong-answer {
     color: red;
 }
+
 .show-answer {
     font-weight: bold;
     cursor: pointer;
@@ -331,6 +345,7 @@ a {
         width: 350px;
         height: 350px;
     }
+
     /* Quizscherm */
 }
 
@@ -358,6 +373,7 @@ a {
         width: 300px;
         height: 300px;
     }
+
     /* Quizscherm */
     .header2 {
         padding-top: 50px;
@@ -375,6 +391,7 @@ a {
         width: 450px;
         font-size: 22px;
     }
+
     .timer {
         width: 140px;
         height: 140px;
@@ -415,6 +432,7 @@ a {
         width: 225px;
         height: 225px;
     }
+
     /* Quizscherm */
     .header2 {
         padding-top: 50px;
@@ -448,6 +466,7 @@ a {
 
 
 @media screen and (max-width:950px) {
+
     /* startscherm */
     /* themascherm */
     .header h2 {
@@ -470,10 +489,12 @@ a {
         width: 230px;
         height: 230px;
     }
+
     /* quizscherm */
 }
 
-@media screen and (min-width:900px) and (max-width: 1000px){
+@media screen and (min-width:900px) and (max-width: 1000px) {
+
     /* startscherm */
     /* themascherm */
     .header h2 {
@@ -496,6 +517,7 @@ a {
         width: 230px;
         height: 230px;
     }
+
     /* quizscherm */
 }
 
@@ -524,6 +546,7 @@ a {
         width: 220px;
         height: 220px;
     }
+
     /* quizscherm */
     .team_name {
         position: absolute;
@@ -532,14 +555,14 @@ a {
         padding: 20px;
         font-size: 20px;
     }
-    
+
     .timer {
         position: absolute;
         top: 1%;
         right: 2%;
         width: 90px;
         height: 90px;
-        font-size:30px;
+        font-size: 30px;
     }
 
     .header2 h1 {
@@ -556,6 +579,7 @@ a {
 }
 
 @media screen and (min-width: 600px) and (max-width:700px) {
+
     /* startscherm */
     /* themascherm */
     .header h2 {
@@ -578,6 +602,7 @@ a {
         width: 220px;
         height: 220px;
     }
+
     /* quizscherm */
     .team_name {
         position: absolute;
@@ -586,14 +611,14 @@ a {
         padding: 20px;
         font-size: 20px;
     }
-    
+
     .timer {
         position: absolute;
         top: 1%;
         right: 2%;
         width: 90px;
         height: 90px;
-        font-size:30px;
+        font-size: 30px;
     }
 
     .header2 h1 {
@@ -608,17 +633,21 @@ a {
         width: 100%;
     }
 }
+
 @media screen and (max-width:600px) {
+
     /* startscherm */
     .header h1 {
-        font-size: 60px; 
+        font-size: 60px;
     }
+
     .nameInput h3 {
         display: flex;
         align-items: center;
         justify-content: center;
         padding-left: 25px;
     }
+
     /* themascherm */
     .header h2 {
         font-size: 40px;
@@ -640,6 +669,7 @@ a {
         width: 200px;
         height: 200px;
     }
+
     /* quischerm */
     .team_name {
         position: absolute;
@@ -647,14 +677,14 @@ a {
         left: 0;
         padding: 20px;
     }
-    
+
     .timer {
         position: absolute;
         top: 1%;
         right: 2%;
         width: 65px;
         height: 65px;
-        font-size:23px;
+        font-size: 23px;
     }
 
     .header2 h1 {
@@ -667,6 +697,7 @@ a {
 }
 
 @media screen and (min-width: 430px) and (max-width: 550px) {
+
     /* startscherm */
     /* themascherm */
     .header h2 {
@@ -689,10 +720,12 @@ a {
         width: 158px;
         height: 158px;
     }
+
     /* quizscherm */
 }
 
 @media screen and (min-width: 400px) and (max-width: 430px) {
+
     /* startscherm */
     /* themascherm */
     .header h2 {
@@ -715,20 +748,24 @@ a {
         width: 158px;
         height: 158px;
     }
+
     /* quizscherm */
 }
 
 @media screen and (max-width:400px) {
+
     /* startscherm */
     .header h1 {
-        font-size: 50px; 
+        font-size: 50px;
     }
+
     .nameInput h3 {
         display: flex;
         align-items: center;
         justify-content: center;
         padding-left: 20px;
     }
+
     /* themascherm */
     .header h2 {
         font-size: 25px;
@@ -760,13 +797,13 @@ a {
         position: absolute;
         top: 0;
         left: 0;
-        padding-left:15px;
-        padding-top:22px;
+        padding-left: 15px;
+        padding-top: 22px;
     }
-    
+
     .timer {
         position: absolute;
-        top:0.5%;
+        top: 0.5%;
         right: 2%;
         width: 60px;
         height: 60px;
@@ -775,7 +812,7 @@ a {
 
     .header2 h1 {
         font-size: 21px;
-        
+
     }
 
     .quiz-pictures {
@@ -788,6 +825,7 @@ a {
         height: 80px;
         font-size: 18px;
     }
+
     .answersInput {
         padding-top: 20px;
     }

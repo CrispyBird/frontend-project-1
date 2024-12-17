@@ -33,7 +33,7 @@ window.onload = function () {
 
     // Thema selectie
     themeButtons.forEach(button => {
-        button.onclick = function (e) {
+        button.onclick = function () {
             const theme = this.innerText;
             sessionStorage.setItem("theme", theme);
             window.location.href = "/pages/quizscherm.html";
@@ -53,6 +53,7 @@ let quizData = [];
 let currentQuestionIndex = 0;
 let selectedTheme = sessionStorage.getItem("theme");
 let userAnswers = []; // Opslaan van gebruikersantwoorden
+let shuffledQuestions = []; // Opslaan van geshuffelde vragen inclusief volgorde
 
 function startTimer() {
     tijd = 15; // Reset tijd voor elke vraag
@@ -89,6 +90,7 @@ async function loadQuiz() {
 function loadNextQuestion() {
     if (currentQuestionIndex >= quizData.length) {
         sessionStorage.setItem("userAnswers", JSON.stringify(userAnswers));
+        sessionStorage.setItem("shuffledQuestions", JSON.stringify(shuffledQuestions));
         window.location.href = "/pages/eindscherm.html";
         return;
     }
@@ -110,13 +112,19 @@ function displayQuestion(question) {
         image.alt = question.alt;
     }
 
+    // Shuffle antwoorden en sla de volgorde op
     const answers = shuffleArray([...question.antwoorden]);
+    shuffledQuestions.push({
+        vraag: question.vraag,
+        antwoorden: answers,
+        correct: answers.indexOf(question.antwoorden[question.correct]),
+    });
+
     buttons.forEach((button, index) => {
         button.innerText = answers[index];
         button.onclick = () => {
             clearInterval(timer); // Stop timer bij klik
-            const selectedAnswerIndex = question.antwoorden.indexOf(button.innerText);
-            saveAnswer(selectedAnswerIndex); // Antwoord opslaan
+            saveAnswer(index); // Antwoord opslaan
             loadNextQuestion(); // Laad volgende vraag
         };
     });
@@ -141,11 +149,12 @@ async function loadEndScreen() {
 
     // Antwoorden ophalen
     const userAnswers = JSON.parse(sessionStorage.getItem("userAnswers")) || [];
+    const shuffledQuestions = JSON.parse(sessionStorage.getItem("shuffledQuestions")) || [];
     const playerName = sessionStorage.getItem("playername") || "Speler";
 
     // Score berekenen
     const playerScore = userAnswers.reduce((score, answer, index) => {
-        return answer === quizData[index].correct ? score + 1 : score;
+        return answer === shuffledQuestions[index].correct ? score + 1 : score;
     }, 0);
 
     // DOM bijwerken
@@ -155,8 +164,8 @@ async function loadEndScreen() {
 
     const questionSections = document.querySelectorAll(".question-section");
     questionSections.forEach((section, index) => {
-        if (index < quizData.length) {
-            const question = quizData[index];
+        if (index < shuffledQuestions.length) {
+            const question = shuffledQuestions[index];
             const userAnswer = userAnswers[index];
             const correctAnswer = question.correct;
 
