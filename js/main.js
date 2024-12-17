@@ -17,7 +17,7 @@ window.onload = function () {
                 alert("Je naam mag niet langer zijn dan 8 tekens.");
             } else {
                 sessionStorage.setItem("playername", playerName);
-                window.location.href = "/pages/themascherm.html";
+                window.location.href = "../pages/themascherm.html";
             }
         };
     }
@@ -36,7 +36,7 @@ window.onload = function () {
         button.onclick = function () {
             const theme = this.innerText;
             sessionStorage.setItem("theme", theme);
-            window.location.href = "/pages/quizscherm.html";
+            window.location.href = "../pages/quizscherm.html";
         };
     });
 
@@ -80,7 +80,7 @@ function updateTimerDisplay() {
 
 // Vraag laden
 async function loadQuiz() {
-    const response = await fetch("/data/quiz.json");
+    const response = await fetch("../data/quiz.json");
     const data = await response.json();
     quizData = shuffleArray(data[selectedTheme]); // Shuffle vragen binnen thema
     currentQuestionIndex = 0;
@@ -91,7 +91,7 @@ function loadNextQuestion() {
     if (currentQuestionIndex >= quizData.length) {
         sessionStorage.setItem("userAnswers", JSON.stringify(userAnswers));
         sessionStorage.setItem("shuffledQuestions", JSON.stringify(shuffledQuestions));
-        window.location.href = "/pages/eindscherm.html";
+        window.location.href = "../pages/eindscherm.html";
         return;
     }
 
@@ -142,7 +142,7 @@ function shuffleArray(array) {
 /* Eindscherm Functionaliteit */
 async function loadEndScreen() {
     // Quizgegevens ophalen
-    const response = await fetch("/data/quiz.json");
+    const response = await fetch("../data/quiz.json");
     const data = await response.json();
     const quizData = data[selectedTheme];
     const maxScore = quizData.length;
