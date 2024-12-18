@@ -156,7 +156,10 @@ a {
     text-align: center;
     gap: 25px;
     padding-top: 30px;
+}
 
+.header2 h1 {
+    font-size: 60px;
 }
 
 .quiz-section {
@@ -334,13 +337,14 @@ a {
 }
 
 @keyframes fade-up {
+
     0%,
     25% {
         opacity: 0;
         transform: translatey(180px) scale(1.6);
     }
 
-    25%{
+    25% {
         opacity: 1;
 
     }
@@ -376,6 +380,9 @@ a {
     }
 
     /* Quizscherm */
+    .header2 h1 {
+        font-size: 45px;
+    }
 }
 
 @media screen and (max-width:1200px) {
@@ -409,7 +416,57 @@ a {
     }
 
     .header2 h1 {
-        font-size: 55px;
+        font-size: 45px;
+    }
+
+    .answers {
+        gap: 30px;
+    }
+
+    .quiz-button {
+        width: 450px;
+        font-size: 22px;
+    }
+
+    .timer {
+        width: 140px;
+        height: 140px;
+        font-size: 35px;
+    }
+}
+
+@media screen and (min-width:1000px) and (max-width: 1101px) {
+
+    /* Startscherm */
+    /* Themascherm */
+    .header h2 {
+        font-size: 35px;
+    }
+
+    .nameInput {
+        padding-top: 175px;
+    }
+
+    .thema__buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .thema__1,
+    .thema__2,
+    .thema__3 {
+        font-size: 18px;
+        width: 300px;
+        height: 300px;
+    }
+
+    /* Quizscherm */
+    .header2 {
+        padding-top: 50px;
+    }
+
+    .header2 h1 {
+        font-size: 40px;
     }
 
     .answers {
@@ -551,6 +608,23 @@ a {
 }
 
 
+@media screen and (min-width:700px) and (max-width:770px) {
+
+    /* eindscherm */
+    .header3 h2 {
+        font-size: 35px;
+    }
+
+    .scoreBoard2 {
+        font-size: 30px;
+    }
+
+    .question-section {
+        width: 90%;
+    }
+}
+
+
 @media screen and (min-width:700px) and (max-width:750px) {
     /* startscherm */
 
@@ -596,6 +670,7 @@ a {
 
     .header2 h1 {
         font-size: 25px;
+        padding-top: 50px;
     }
 
     .quiz-button {
@@ -652,6 +727,7 @@ a {
 
     .header2 h1 {
         font-size: 25px;
+        padding-top: 50px;
     }
 
     .quiz-button {
@@ -661,6 +737,39 @@ a {
     .quiz-section {
         width: 100%;
     }
+
+    /* eindscherm */
+    .header3 h2 {
+        font-size: 30px;
+    }
+
+    .scoreBoardSection h4 {
+        font-size: 25px;
+    }
+
+    .repeatButton {
+        width: 400px;
+        font-size: 23px;
+    }
+
+    .scoreBoard2 {
+        font-size: 27px;
+    }
+
+    .question-section {
+        width: 90%;
+    }
+
+    .question-section h3,
+    .show-answer {
+        font-size: 17px;
+    }
+
+    .question-section p {
+        font-size: 16px;
+    }
+
+
 }
 
 @media screen and (max-width:600px) {
@@ -718,10 +827,42 @@ a {
 
     .header2 h1 {
         font-size: 20px;
+        padding-top: 40px;
     }
 
     .quiz-button {
         width: 400px;
+    }
+
+    /* eindscherm */
+    .header3 h2 {
+        font-size: 30px;
+    }
+
+    .scoreBoardSection h4 {
+        font-size: 25px;
+    }
+
+    .repeatButton {
+        width: 400px;
+        font-size: 23px;
+    }
+
+    .scoreBoard2 {
+        font-size: 27px;
+    }
+
+    .question-section {
+        width: 90%;
+    }
+
+    .question-section h3,
+    .show-answer {
+        font-size: 17px;
+    }
+
+    .question-section p {
+        font-size: 15px;
     }
 }
 
@@ -751,6 +892,37 @@ a {
     }
 
     /* quizscherm */
+
+    /* eindscherm */
+    .header3 h2 {
+        font-size: 27px;
+    }
+
+    .scoreBoardSection h4 {
+        font-size: 22px;
+    }
+
+    .repeatButton {
+        width: 350px;
+        font-size: 20px;
+    }
+
+    .scoreBoard2 {
+        font-size: 23px;
+    }
+
+    .question-section {
+        width: 90%;
+    }
+
+    .question-section h3,
+    .show-answer {
+        font-size: 15px;
+    }
+
+    .question-section p {
+        font-size: 14px;
+    }
 }
 
 @media screen and (min-width: 400px) and (max-width: 430px) {
@@ -779,6 +951,41 @@ a {
     }
 
     /* quizscherm */
+
+    /* eindscherm */
+    .header3 h2 {
+        font-size: 25px;
+    }
+
+    .scoreBoardSection h4 {
+        font-size: 22px;
+    }
+
+    .highScores {
+        font-size: 19px;
+    }
+
+    .repeatButton {
+        width: 300px;
+        font-size: 18px;
+    }
+
+    .scoreBoard2 {
+        font-size: 23px;
+    }
+
+    .question-section {
+        width: 90%;
+    }
+
+    .question-section h3,
+    .show-answer {
+        font-size: 14px;
+    }
+
+    .question-section p {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width:400px) {
@@ -834,8 +1041,8 @@ a {
         position: absolute;
         top: 0.5%;
         right: 2%;
-        width: 60px;
-        height: 60px;
+        width: 65px;
+        height: 65px;
         font-size: 21px;
     }
 
@@ -857,5 +1064,40 @@ a {
 
     .answersInput {
         padding-top: 20px;
+    }
+
+     /* eindscherm */
+     .header3 h2 {
+        font-size: 22px;
+    }
+
+    .scoreBoardSection h4 {
+        font-size: 18px;
+    }
+
+    .highScores {
+        font-size: 19px;
+    }
+
+    .repeatButton {
+        width: 200px;
+        font-size: 15px;
+    }
+
+    .scoreBoard2 {
+        font-size: 20px;
+    }
+
+    .question-section {
+        width: 90%;
+    }
+
+    .question-section h3,
+    .show-answer {
+        font-size: 13px;
+    }
+
+    .question-section p {
+        font-size: 12px;
     }
 }
