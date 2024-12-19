@@ -53,11 +53,7 @@ p {
 }
 
 .nameInput {
-    padding-top: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-top: 80px;
     gap: 20px;
 }
 
@@ -94,9 +90,12 @@ input {
     padding: 20px;
 }
 
-.themascherm {
-    padding: 25px;
-    gap: 50px;
+.themascherm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
 }
 
 h6 {
@@ -106,7 +105,7 @@ h6 {
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 600;
 }
 
@@ -120,15 +119,15 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 80px;
 }
 
 .thema__1,
 .thema__2,
 .thema__3 {
     background: #414bb2;
-    width: 450px;
-    height: 450px;
+    width: 420px;
+    height: 420px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -359,11 +358,11 @@ a {
     /* Startscherm */
     /* Themascherm */
     .header h2 {
-        font-size: 35px;
+        font-size: 40px;
     }
 
     .nameInput {
-        padding-top: 150px;
+        padding-top:100px;
     }
 
     .thema__buttons {
@@ -385,7 +384,7 @@ a {
     }
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1270px) {
 
     /* Startscherm */
     /* Themascherm */
@@ -394,7 +393,7 @@ a {
     }
 
     .nameInput {
-        padding-top: 175px;
+        padding-top: 40px;
     }
 
     .thema__buttons {
@@ -435,21 +434,22 @@ a {
     }
 }
 
-@media screen and (min-width:1000px) and (max-width: 1101px) {
+@media screen and (min-width:1000px) and (max-width: 1100px) {
 
     /* Startscherm */
     /* Themascherm */
     .header h2 {
-        font-size: 35px;
+        font-size: 32px;
     }
 
     .nameInput {
-        padding-top: 175px;
+        padding-top: 60px;
     }
 
     .thema__buttons {
         display: flex;
         flex-wrap: wrap;
+        gap: 30px;
     }
 
     .thema__1,
@@ -486,12 +486,7 @@ a {
 }
 
 
-@media screen and (max-width:1000px) {
-    body {
-        overflow-y: scroll;
-        height: 100vh;
-    }
-
+@media screen and (min-width:900px) and (max-width: 1000px) {
     /* Startscherm */
     .header p {
         width: 100%;
@@ -499,16 +494,20 @@ a {
 
     /* Themascherm */
     .header h2 {
-        font-size: 32px;
+        font-size: 38px;
+    }
+    h3{
+        font-size: 16px;
     }
 
     .nameInput {
-        padding-top: 100px;
+        padding-top: 80px;
     }
 
     .thema__buttons {
         display: flex;
         flex-wrap: wrap;
+        gap: 35px;
     }
 
     .thema__1,
@@ -550,58 +549,33 @@ a {
     }
 }
 
-
-@media screen and (max-width:950px) {
-
-    /* startscherm */
-    /* themascherm */
-    .header h2 {
-        font-size: 32px;
-    }
-
-    .nameInput {
-        padding-top: 100px;
-    }
-
-    .thema__buttons {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .thema__1,
-    .thema__2,
-    .thema__3 {
-        font-size: 18px;
-        width: 230px;
-        height: 230px;
-    }
-
-    /* quizscherm */
-}
-
-@media screen and (min-width:900px) and (max-width: 1000px) {
+@media screen and (min-width:700px) and (max-width: 900px) {
 
     /* startscherm */
     /* themascherm */
     .header h2 {
         font-size: 32px;
     }
+    h3{
+        font-size: 14px;
+    }
 
     .nameInput {
-        padding-top: 175px;
+        padding-top: 50px;
     }
 
     .thema__buttons {
         display: flex;
         flex-wrap: wrap;
+        gap: 20px;
     }
 
     .thema__1,
     .thema__2,
     .thema__3 {
         font-size: 18px;
-        width: 230px;
-        height: 230px;
+        width: 200px;
+        height: 200px;
     }
 
     /* quizscherm */
@@ -625,29 +599,33 @@ a {
 }
 
 
-@media screen and (min-width:700px) and (max-width:750px) {
+@media screen and (min-width:600px) and (max-width:700px) {
     /* startscherm */
 
     /* themascherm */
     .header h2 {
-        font-size: 30px;
+        font-size: 25px;
+    }
+    h3{
+        font-size: 13px;
     }
 
     .nameInput {
-        padding-top: 100px;
+        padding-top: 40px;
     }
 
     .thema__buttons {
         display: flex;
         flex-wrap: wrap;
+        gap: 10px;
     }
 
     .thema__1,
     .thema__2,
     .thema__3 {
         font-size: 15px;
-        width: 220px;
-        height: 220px;
+        width: 180px;
+        height: 180px;
     }
 
     /* quizscherm */
@@ -682,29 +660,33 @@ a {
     }
 }
 
-@media screen and (min-width: 600px) and (max-width:700px) {
+@media screen and (min-width: 500px) and (max-width:600px) {
 
     /* startscherm */
     /* themascherm */
     .header h2 {
-        font-size: 30px;
+        font-size: 28px;
+    }
+    h3{
+        font-size: 13px;
     }
 
     .nameInput {
-        padding-top: 100px;
+        padding-top: 40px;
     }
 
     .thema__buttons {
         display: flex;
         flex-wrap: wrap;
+        gap: 10px;
     }
 
     .thema__1,
     .thema__2,
     .thema__3 {
         font-size: 15px;
-        width: 220px;
-        height: 220px;
+        width: 150px;
+        height: 150px;
     }
 
     /* quizscherm */
@@ -741,6 +723,10 @@ a {
     /* eindscherm */
     .header3 h2 {
         font-size: 30px;
+    }
+
+    .scoreBoardSection{
+        padding-top: 50px;
     }
 
     .scoreBoardSection h4 {
@@ -772,7 +758,7 @@ a {
 
 }
 
-@media screen and (max-width:600px) {
+@media screen and (min-width: 100px) and (max-width: 500px) {
 
     /* startscherm */
     .header h1 {
@@ -785,14 +771,19 @@ a {
         justify-content: center;
         padding-left: 25px;
     }
-
     /* themascherm */
+    .themascherm{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     .header h2 {
-        font-size: 40px;
+        font-size: 32px;
     }
 
     .nameInput {
-        padding-top: 100px;
+        padding-top: 0;
     }
 
     .thema__buttons {
@@ -808,7 +799,7 @@ a {
         height: 200px;
     }
 
-    /* quischerm */
+    /* quizscherm */
     .team_name {
         position: absolute;
         top: 0;
@@ -829,6 +820,33 @@ a {
         font-size: 20px;
         padding-top: 40px;
     }
+    .header h2 {
+        font-size: 18px;
+    }
+    h3{
+        font-size: 13px;
+    }
+
+    .nameInput {
+        padding-top: 40px;
+    }
+
+    .teamName{
+        font-size: 13px;
+    }
+
+    .thema__buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .thema__1,
+    .thema__2,
+    .thema__3 {
+        font-size: 15px;
+        width: 200px;
+        height: 200px;
+    }
 
     .quiz-button {
         width: 400px;
@@ -836,7 +854,40 @@ a {
 
     /* eindscherm */
     .header3 h2 {
+        font-size: 27px;
+    }
+
+    .scoreBoardSection h4 {
+        font-size: 24px;
+    }
+
+    .repeatButton {
+        width: 350px;
+        font-size: 20px;
+    }
+
+    .scoreBoard2 {
+        font-size: 23px;
+    }
+
+    .question-section {
+        width: 90%;
+    }
+
+    .question-section h3,
+    .show-answer {
+        font-size: 15px;
+    }
+
+    .question-section p {
+        font-size: 14px;
+    }
+    .header3 h2 {
         font-size: 30px;
+    }
+
+    .scoreBoardSection{
+        padding-top: 50px;
     }
 
     .scoreBoardSection h4 {
@@ -866,66 +917,7 @@ a {
     }
 }
 
-@media screen and (min-width: 430px) and (max-width: 550px) {
-
-    /* startscherm */
-    /* themascherm */
-    .header h2 {
-        font-size: 25px;
-    }
-
-    .nameInput {
-        padding-top: 100px;
-    }
-
-    .thema__buttons {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .thema__1,
-    .thema__2,
-    .thema__3 {
-        font-size: 15px;
-        width: 158px;
-        height: 158px;
-    }
-
-    /* quizscherm */
-
-    /* eindscherm */
-    .header3 h2 {
-        font-size: 27px;
-    }
-
-    .scoreBoardSection h4 {
-        font-size: 22px;
-    }
-
-    .repeatButton {
-        width: 350px;
-        font-size: 20px;
-    }
-
-    .scoreBoard2 {
-        font-size: 23px;
-    }
-
-    .question-section {
-        width: 90%;
-    }
-
-    .question-section h3,
-    .show-answer {
-        font-size: 15px;
-    }
-
-    .question-section p {
-        font-size: 14px;
-    }
-}
-
-@media screen and (min-width: 400px) and (max-width: 430px) {
+@media screen and (min-width: 480px) and (max-width: 500px) {
 
     /* startscherm */
     /* themascherm */
@@ -946,8 +938,8 @@ a {
     .thema__2,
     .thema__3 {
         font-size: 15px;
-        width: 158px;
-        height: 158px;
+        width: 200px;
+        height: 200px;
     }
 
     /* quizscherm */
@@ -988,7 +980,7 @@ a {
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:480px) {
 
     /* startscherm */
     .header h1 {
@@ -1003,25 +995,36 @@ a {
     }
 
     /* themascherm */
+    .themascherm{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        height: 85vh;
+    }
+
     .header h2 {
         font-size: 25px;
     }
 
     .nameInput {
-        padding-top: 40px;
+        padding-top: 0;
     }
 
     .thema__buttons {
         display: flex;
         flex-wrap: wrap;
+        /* gap: 20px; */
     }
 
     .thema__1,
     .thema__2,
     .thema__3 {
-        font-size: 15px;
-        width: 158px;
-        height: 158px;
+        font-size: 18px;
+        width: 250px;
+        height: 150px;
+        border-radius: 40px;
     }
 
     /* quizscherm */
