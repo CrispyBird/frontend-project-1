@@ -1,0 +1,218 @@
+{
+  "Dieren": [
+    {
+      "vraag": "Hoe heet dit dier?",
+      "antwoorden": ["Luiaard", "Aap", "Leeuw", "Slang"],
+      "correct": 0,
+      "img": "luiaard.jpg",
+      "alt": "Een luiaard die in een boom hangt."
+    },
+    {
+      "vraag": "Hoeveel poten heeft een spin?",
+      "antwoorden": ["6", "8", "10", "12"],
+      "correct": 1,
+      "img": "spin.jpg",
+      "alt": "Een spin op een web."
+    },
+    {
+      "vraag": "Wat is het grootste landdier?",
+      "antwoorden": ["Olifant", "Giraffe", "Nijlpaard", "Beer"],
+      "correct": 0,
+      "img": "olifant.jpg",
+      "alt": "Een grote Afrikaanse olifant."
+    },
+    {
+      "vraag": "Welk dier wordt vaak gebruikt als symbool voor vrede?",
+      "antwoorden": ["Duif", "Adelaar", "Leeuw", "Eland"],
+      "correct": 0,
+      "img": "duif.jpg",
+      "alt": "Het vredessymbool."
+    },
+    {
+      "vraag": "Welk dier zie je op foto?",
+      "antwoorden": ["Cheeta", "Leeuw", "Luipaard", "Antilope"],
+      "correct": 0,
+      "img": "cheeta.jpg",
+      "alt": "Een cheeta in volle sprint."
+    },
+    {
+      "vraag": "Wat eet een panda vooral?",
+      "antwoorden": ["Bamboe", "Bladeren", "Fruit", "Gras"],
+      "correct": 0,
+      "img": "panda.jpg",
+      "alt": "Een panda die gras eet."
+    },
+    {
+      "vraag": "Hoe lang kan een krokodil zonder eten?",
+      "antwoorden": ["1 week", "3 maanden", "1 jaar", "2 jaar"],
+      "correct": 3,
+      "img": "krokodil.jpg",
+      "alt": "Een rustende krokodil in het water."
+    },
+    {
+      "vraag": "Welk dier legt eieren en geeft melk?",
+      "antwoorden": ["Vogelbekdier", "Slang", "Pinguïn", "Otter"],
+      "correct": 0,
+      "img": "vogelbekdier.jpg",
+      "alt": "Een vogelbekdier aan de oever van een rivier."
+    },
+    {
+      "vraag": "Wat is de natuurlijke habitat van een ijsbeer?",
+      "antwoorden": ["Arctisch gebied", "Savanne", "Regenwoud", "Woestijn"],
+      "correct": 0,
+      "img": "ijsbeer.jpg",
+      "alt": "Een ijsbeer."
+    },
+    {
+      "vraag": "Wat is het grootste dier ter wereld?",
+      "antwoorden": ["Blauwe vinvis", "Olifant", "Walrus", "Walvishaai"],
+      "correct": 0,
+      "img": "blauwe_vinvis.jpg",
+      "alt": "Een blauwe vinvis die door de oceaan zwemt."
+    }
+  ],
+  "Software Development": [
+    {
+      "vraag": "Wat is HTML?",
+      "antwoorden": ["Een programmeertaal", "Een opmaaktaal", "Een database", "Een framework"],
+      "correct": 1,
+      "img": "html_logo.png",
+      "alt": "Het HTML5-logo."
+    },
+    {
+      "vraag": "Wat doet CSS?",
+      "antwoorden": ["Structuur geven", "Opmaak verzorgen", "Data opslaan", "Code debuggen"],
+      "correct": 1,
+      "img": "css_logo.png",
+      "alt": "Het CSS3-logo."
+    },
+    {
+      "vraag": "Wat betekent API?",
+      "antwoorden": ["Application Program Interface", "Advanced Protocol Integration", "Access Point Information", "None of these"],
+      "correct": 0,
+      "img": "api_icon.png",
+      "alt": "Een API-pictogram met tandwielen."
+    },
+    {
+      "vraag": "Wat is een array?",
+      "antwoorden": ["Een variabele", "Een functie", "Een collectie van data", "Een object"],
+      "correct": 2,
+      "img": "array_code.png",
+      "alt": "Een codevoorbeeld van een array in JavaScript."
+    },
+    {
+      "vraag": "Wat doet de 'let'-keyword?",
+      "antwoorden": ["Een constante variabele aanmaken", "Een variabele met block scope aanmaken", "Een functie oproepen", "Een object maken"],
+      "correct": 1,
+      "img": "javascript_logo.png",
+      "alt": "Het JavaScript-logo."
+    },
+    {
+      "vraag": "Wat betekent SQL?",
+      "antwoorden": ["Structured Query Language", "Simple Query Language", "System Query Layer", "None of these"],
+      "correct": 0,
+      "img": "sql_icon.png",
+      "alt": "Het SQL-logo."
+    },
+    {
+      "vraag": "Wat is een git repository?",
+      "antwoorden": ["Een server", "Een opslagplaats voor code", "Een soort database", "Een front-end framework"],
+      "correct": 1,
+      "img": "git_icon.png",
+      "alt": "Het Git-logo met een takstructuur."
+    },
+    {
+      "vraag": "Wat doet de DOM?",
+      "antwoorden": ["Document Object Model", "Data Output Module", "Dynamic Object Memory", "Document Online Mode"],
+      "correct": 0,
+      "img": "dom_structure.png",
+      "alt": "Een visuele weergave van de DOM-structuur."
+    },
+    {
+      "vraag": "Wat is een bug in software?",
+      "antwoorden": ["Een fout in de code", "Een functie", "Een variabele", "Een database"],
+      "correct": 0,
+      "img": "bug_icon.png",
+      "alt": "Een pictogram van een insect dat een bug symboliseert."
+    },
+    {
+      "vraag": "Wat is een framework?",
+      "antwoorden": ["Een bibliotheek", "Een set tools voor ontwikkeling", "Een server", "Een database"],
+      "correct": 1,
+      "img": "framework_icon.png",
+      "alt": "Een pictogram dat een framework voorstelt."
+    }
+  ],
+  "Landen/Steden": [
+    {
+      "vraag": "Wat is de hoofdstad van Nederland?",
+      "antwoorden": ["Amsterdam", "Rotterdam", "Den Haag", "Utrecht"],
+      "correct": 0,
+      "img": "amsterdam.jpg",
+      "alt": "De grachten van Amsterdam."
+    },
+    {
+      "vraag": "Welk land heeft de grootste bevolking?",
+      "antwoorden": ["India", "China", "VS", "Brazilië"],
+      "correct": 1,
+      "img": "china_population.jpg",
+      "alt": "Een drukke straat in China."
+    },
+    {
+      "vraag": "Wat is de kleinste onafhankelijke staat?",
+      "antwoorden": ["Monaco", "Vaticaanstad", "San Marino", "Liechtenstein"],
+      "correct": 1,
+      "img": "vaticaanstad.jpg",
+      "alt": "De Sint-Pietersbasiliek in Vaticaanstad."
+    },
+    {
+      "vraag": "In welk continent ligt Brazilië?",
+      "antwoorden": ["Afrika", "Europa", "Zuid-Amerika", "Azië"],
+      "correct": 2,
+      "img": "brazil_continent.jpg",
+      "alt": "Een foto van het standbeeld in Rio de Janeiro."
+    },
+    {
+      "vraag": "Wat is de grootste woestijn ter wereld?",
+      "antwoorden": ["Sahara", "Gobi", "Atacama", "Antarctica"],
+      "correct": 3,
+      "img": "antarctica.jpg",
+      "alt": "Een ijzig landschap in Antarctica."
+    },
+    {
+      "vraag": "Hoeveel sterren staan er op de Amerikaanse vlag?",
+      "antwoorden": ["48", "50", "52", "54"],
+      "correct": 1,
+      "img": "american_flag.jpg",
+      "alt": "Een foto van het witte huis van Amerika."
+    },
+    {
+      "vraag": "Welke taal spreekt men in Brazilië?",
+      "antwoorden": ["Spaans", "Portugees", "Engels", "Frans"],
+      "correct": 1,
+      "img": "brazil_language.jpg",
+      "alt": "Een Braziliaanse vlag."
+    },
+    {
+      "vraag": "Wat is het hoogste gebergte in de wereld?",
+      "antwoorden": ["Alpen", "Rocky Mountains", "Himalaya", "Andes"],
+      "correct": 2,
+      "img": "himalaya.jpg",
+      "alt": "Besneeuwde bergtoppen."
+    },
+    {
+      "vraag": "Welk land staat bekend als het land van de rijzende zon?",
+      "antwoorden": ["China", "Japan", "Thailand", "India"],
+      "correct": 1,
+      "img": "japan_sun.jpg",
+      "alt": "Een zonsopgang in Japan."
+    },
+    {
+      "vraag": "Wat is de valuta van het Verenigd Koninkrijk?",
+      "antwoorden": ["Euro", "Dollar", "Pond", "Frank"],
+      "correct": 2,
+      "img": "british_pound.jpg",
+      "alt": "Een afbeelding van Britse ponden."
+    }
+  ]
+}
