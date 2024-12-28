@@ -925,7 +925,7 @@ a {
     }
 }
 
-@media screen and (min-width: 400px) and (max-width: 430px) {
+@media screen and (min-width: 400px) and (max-width: 432px) {
 
     /* startscherm */
     /* themascherm */
@@ -1066,8 +1066,8 @@ a {
         padding-top: 20px;
     }
 
-     /* eindscherm */
-     .header3 h2 {
+    /* eindscherm */
+    .header3 h2 {
         font-size: 22px;
     }
 
@@ -1100,4 +1100,32 @@ a {
     .question-section p {
         font-size: 12px;
     }
+}
+
+@media screen and (max-width:345px) {
+
+    /* Startscherm */
+    p {
+        font-size: 15px;
+    }
+
+    .nameInput h3 {
+        font-size: 17px;
+    }
+
+    .nameInput .input {
+        width: 90%;
+    }
+
+    .submit {
+        width: 220px;
+        height: 70px;
+        font-size: 17px;
+    }
+
+    /* Themascherm */
+    .header h2 {
+        font-size: 20px;
+    }
+
 }
