@@ -5,7 +5,7 @@ const teamName = document.getElementById("TeamName");
 const playerNameElement = document.getElementById("playerName");
 const themeButtons = document.querySelectorAll(".thema__buttons a");
 
-window.onload = function  () {
+window.onload = function () {
     // Startknop in index.html
     if (startButton && nameInput) {
         startButton.onclick = function () {
@@ -98,7 +98,7 @@ function loadNextQuestion() {
     const question = quizData[currentQuestionIndex];
     displayQuestion(question);
     currentQuestionIndex++;
-    startTimer();
+    // startTimer();
 }
 
 function displayQuestion(question) {
@@ -157,11 +157,45 @@ async function loadEndScreen() {
         return answer === shuffledQuestions[index].correct ? score + 1 : score;
     }, 0);
 
-    // DOM bijwerken
+    // Unieke key per thema
+    const scoreboardKey = `scoreboard_${selectedTheme}`;
+    const scoreboard = JSON.parse(localStorage.getItem(scoreboardKey)) || [];
+
+    // Controleren of speler al op het scoreboard staat
+    const existingPlayerIndex = scoreboard.findIndex(entry => entry.name === playerName);
+    if (existingPlayerIndex !== -1) {
+        // Alleen hoogste score opslaan
+        if (scoreboard[existingPlayerIndex].score < playerScore) {
+            scoreboard[existingPlayerIndex].score = playerScore;
+        }
+    } else {
+        scoreboard.push({ name: playerName, score: playerScore });
+    }
+
+    // Scoreboard sorteren en beperken tot top 3
+    scoreboard.sort((a, b) => b.score - a.score);
+    const topScores = scoreboard.slice(0, 3);
+
+    // Opslaan in localStorage
+    localStorage.setItem(scoreboardKey, JSON.stringify(scoreboard));
+
+    // Scoreboard in DOM bijwerken
     document.getElementById("playerName").innerText = playerName;
     document.getElementById("playerScore").innerText = playerScore;
     document.getElementById("maxScore").innerText = maxScore;
 
+    const scoreBoardSection = document.querySelector(".scoreBoardSection");
+    if (scoreBoardSection) {
+        const highScore1 = document.getElementById("highScore1");
+        const highScore2 = document.getElementById("highScore2");
+        const highScore3 = document.getElementById("highScore3");
+
+        if (highScore1) highScore1.innerText = topScores[0] ? `${topScores[0].name} ${topScores[0].score} punten` : "";
+        if (highScore2) highScore2.innerText = topScores[1] ? `${topScores[1].name} ${topScores[1].score} punten` : "";
+        if (highScore3) highScore3.innerText = topScores[2] ? `${topScores[2].name} ${topScores[2].score} punten` : "";
+    }
+
+    // Vraagresultaten in DOM bijwerken
     const questionSections = document.querySelectorAll(".question-section");
     questionSections.forEach((section, index) => {
         if (index < shuffledQuestions.length) {
