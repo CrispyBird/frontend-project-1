@@ -258,7 +258,15 @@ a {
 }
 
 .scoreBoardSection {
-    padding-top: 100px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scoreBoardBtn{
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -267,6 +275,11 @@ a {
 
 .scoreBoard {
     font-size: 30px;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .scoreBoard2 {
