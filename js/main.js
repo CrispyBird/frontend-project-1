@@ -169,11 +169,21 @@ async function loadEndScreen() {
             scoreboard[existingPlayerIndex].score = playerScore;
         }
     } else {
-        scoreboard.push({ name: playerName, score: playerScore });
+        scoreboard.unshift({ name: playerName, score: playerScore });
     }
 
-    // Scoreboard sorteren en beperken tot top 3
+    // Scoreboard sorteren en herschikken
     scoreboard.sort((a, b) => b.score - a.score);
+
+    // Plaats speler met 10 punten bovenaan als er meerdere met 10 punten zijn
+    if (playerScore === 10) {
+        const indexOfPlayer = scoreboard.findIndex(entry => entry.name === playerName);
+        if (indexOfPlayer > 0) {
+            const [playerEntry] = scoreboard.splice(indexOfPlayer, 1);
+            scoreboard.unshift(playerEntry);
+        }
+    }
+
     const topScores = scoreboard.slice(0, 3);
 
     // Opslaan in localStorage
