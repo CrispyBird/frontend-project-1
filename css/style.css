@@ -653,8 +653,6 @@ a {
     .header h2 {
         padding-top: 75px;
     }
-
-    .thema__buttons {}
 }
 
 @media screen and (min-width:770px) and (max-width:900px) {
