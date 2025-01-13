@@ -112,6 +112,7 @@ function loadNextQuestion() {
     startTimer(); // Start de timer voor de nieuwe vraag
 }
 
+// Tycho
 // Vraag weergeven
 function displayQuestion(question) {
     const header = document.querySelector("h1");
