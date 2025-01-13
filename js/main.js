@@ -1,28 +1,34 @@
+// Bruno
+
 /* Teamnaam en Thema */
+// Elementen ophalen uit de DOM
 const startButton = document.getElementById("startButton");
 const nameInput = document.getElementById("name");
 const teamName = document.getElementById("TeamName");
 const playerNameElement = document.getElementById("playerName");
 const themeButtons = document.querySelectorAll(".thema__buttons a");
 
+// Uit te voeren bij het laden van de pagina
 window.onload = function () {
-    // Startknop in index.html
+    // Functionaliteit voor de startknop op index.html
     if (startButton && nameInput) {
         startButton.onclick = function () {
-            const playerName = nameInput.value.trim();
+            const playerName = nameInput.value.trim(); // Haal de naam van de gebruiker op
 
+            // Validatie van de ingevoerde naam
             if (playerName === "") {
                 alert("Vul een naam in om de quiz te starten.");
             } else if (playerName.length > 8) {
                 alert("Je naam mag niet langer zijn dan 8 tekens.");
             } else {
+                // Opslaan van naam en doorgaan naar het themascherm
                 sessionStorage.setItem("playername", playerName);
                 window.location.href = "../pages/themascherm.html";
             }
         };
     }
 
-    // Laad spelernaam en themascherm
+    // Laad de spelernaam op het themascherm
     const playerName = sessionStorage.getItem("playername");
     if (playerNameElement && playerName) {
         playerNameElement.innerText = playerName;
@@ -31,46 +37,49 @@ window.onload = function () {
         teamName.innerText = "Team: " + playerName;
     }
 
-    // Thema selectie
+    // Thema selectieknoppen functionaliteit
     themeButtons.forEach(button => {
         button.onclick = function () {
-            const theme = this.innerText;
-            sessionStorage.setItem("theme", theme);
-            window.location.href = "../pages/quizscherm.html";
+            const theme = this.innerText; // Haal het geselecteerde thema op
+            sessionStorage.setItem("theme", theme); // Sla het thema op in sessionStorage
+            window.location.href = "../pages/quizscherm.html"; // Ga naar het quizscherm
         };
     });
 
-    // Eindscherm logica
+    // Controleer of de gebruiker op het eindscherm is
     if (window.location.pathname.includes("eindscherm.html")) {
-        loadEndScreen();
+        loadEndScreen(); // Laad de eindschermlogica
     }
 };
 
 /* Timer en Quiz Functionaliteit */
-let timer;
-let tijd = 15; // Tijd per vraag
-let quizData = [];
-let currentQuestionIndex = 0;
-let selectedTheme = sessionStorage.getItem("theme");
-let userAnswers = []; // Opslaan van gebruikersantwoorden
-let shuffledQuestions = []; // Opslaan van geshuffelde vragen inclusief volgorde
+let timer; // Variabele voor de timer
+let tijd = 15; // Aantal seconden per vraag
+let quizData = []; // Array met quizvragen
+let currentQuestionIndex = 0; // Huidige vraagindex
+let selectedTheme = sessionStorage.getItem("theme"); // Opgehaald thema uit sessionStorage
+let userAnswers = []; // Opslag van gegeven antwoorden
+let shuffledQuestions = []; // Opslag van geshuffelde vragen
 
+// Timer starten
 function startTimer() {
-    tijd = 15; // Reset tijd voor elke vraag
-    updateTimerDisplay();
+    tijd = 15; // Reset de timer voor elke vraag
+    updateTimerDisplay(); // Update de timerweergave
     timer = setInterval(() => {
         tijd--;
         updateTimerDisplay();
 
+        // Controleer of de tijd op is
         if (tijd <= 0) {
-            clearInterval(timer);
+            clearInterval(timer); // Stop de timer
             alert("Tijd is om!");
-            saveAnswer(null); // Geen antwoord gegeven
-            loadNextQuestion();
+            saveAnswer(null); // Sla een leeg antwoord op
+            loadNextQuestion(); // Ga naar de volgende vraag
         }
     }, 1000);
 }
 
+// Update de weergave van de timer
 function updateTimerDisplay() {
     const timerElement = document.getElementById("timer");
     if (timerElement) {
@@ -78,17 +87,19 @@ function updateTimerDisplay() {
     }
 }
 
-// Vraag laden
+// Quizdata laden en starten
 async function loadQuiz() {
-    const response = await fetch("../data/quiz.json");
+    const response = await fetch("../data/quiz.json"); // Haal de quizdata op
     const data = await response.json();
-    quizData = shuffleArray(data[selectedTheme]); // Shuffle vragen binnen thema
-    currentQuestionIndex = 0;
-    loadNextQuestion();
+    quizData = shuffleArray(data[selectedTheme]); // Shuffle de vragen
+    currentQuestionIndex = 0; // Begin bij de eerste vraag
+    loadNextQuestion(); // Laad de eerste vraag
 }
 
+// Laad de volgende vraag
 function loadNextQuestion() {
     if (currentQuestionIndex >= quizData.length) {
+        // Opslaan van antwoorden en navigeren naar eindscherm
         sessionStorage.setItem("userAnswers", JSON.stringify(userAnswers));
         sessionStorage.setItem("shuffledQuestions", JSON.stringify(shuffledQuestions));
         window.location.href = "../pages/eindscherm.html";
@@ -96,45 +107,49 @@ function loadNextQuestion() {
     }
 
     const question = quizData[currentQuestionIndex];
-    displayQuestion(question);
-    currentQuestionIndex++;
-    startTimer();
+    displayQuestion(question); // Toon de vraag
+    currentQuestionIndex++; // Verhoog de vraagindex
+    startTimer(); // Start de timer voor de nieuwe vraag
 }
 
+// Vraag weergeven
 function displayQuestion(question) {
     const header = document.querySelector("h1");
     const image = document.querySelector(".quiz-pictures");
     const buttons = document.querySelectorAll(".quiz-button");
 
-    if (header) header.innerText = question.vraag;
+    if (header) header.innerText = question.vraag; // Toon de vraagtekst
     if (image) {
-        image.src = question.img;
-        image.alt = question.alt;
+        image.src = question.img; // Toon de afbeelding
+        image.alt = question.alt; // Voeg een alternatieve tekst toe
     }
 
-    // Shuffle antwoorden en sla de volgorde op
+    // Shuffle de antwoorden en sla de volgorde op
     const answers = shuffleArray([...question.antwoorden]);
     shuffledQuestions.push({
         vraag: question.vraag,
         antwoorden: answers,
-        correct: answers.indexOf(question.antwoorden[question.correct]),
+        correct: answers.indexOf(question.antwoorden[question.correct]), // Index van het juiste antwoord
     });
 
+    // Antwoordknoppen vullen en kliklogica toevoegen
     buttons.forEach((button, index) => {
         button.innerText = answers[index];
         button.onclick = () => {
-            clearInterval(timer); // Stop timer bij klik
-            saveAnswer(index); // Antwoord opslaan
-            loadNextQuestion(); // Laad volgende vraag
+            clearInterval(timer); // Stop de timer
+            saveAnswer(index); // Sla het gekozen antwoord op
+            loadNextQuestion(); // Laad de volgende vraag
         };
     });
 }
 
+// Antwoord opslaan
 function saveAnswer(answerIndex) {
     userAnswers.push(answerIndex);
 }
 
 /* Helper functies */
+// Functie om een array te shuffelen
 function shuffleArray(array) {
     return array.sort(() => Math.random() - 0.5);
 }
@@ -147,7 +162,7 @@ async function loadEndScreen() {
     const quizData = data[selectedTheme];
     const maxScore = quizData.length;
 
-    // Antwoorden ophalen
+    // Data ophalen
     const userAnswers = JSON.parse(sessionStorage.getItem("userAnswers")) || [];
     const shuffledQuestions = JSON.parse(sessionStorage.getItem("shuffledQuestions")) || [];
     const playerName = sessionStorage.getItem("playername") || "Speler";
@@ -232,6 +247,7 @@ async function loadEndScreen() {
 }
 
 /* Quiz starten */
+// Start de quiz als de gebruiker zich op het quizscherm bevindt
 if (window.location.pathname.includes("quizscherm.html")) {
     loadQuiz();
 }
